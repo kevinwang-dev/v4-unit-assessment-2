@@ -12,3 +12,149 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 60px;
+}
+
+/* header section */
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 8px 16px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.main-header h1 {
+  color: rgb(42, 171, 226);
+  font-size: 20px;
+}
+
+nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  height: 800px;
+}
+
+.section-one {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.section-one p {
+  width: 100%;
+  font-size: 10px;
+}
+
+.section-one h3 {
+  margin-bottom: 10px;
+}
+
+.text {
+  width: 60%;
+}
+.side {
+  width: 30%;
+}
+.profile {
+  height: 100px;
+  width: 120px;
+  box-shadow: 2px 2px 2px 2px rgba(102, 75, 75, 0.3);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.profile img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 220px;
+  width: 120px;
+  box-shadow: 2px 2px 2px 2px rgba(102, 75, 75, 0.3);
+  border-radius: 5px;
+  padding: 20px;
+  line-height: 18px;
+}
+.list h4 {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+.list li {
+  font-size: 8px;
+}
+
+/* image section */
+.section-two {
+  /* width: 80%; */
+}
+.parent {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.parent img {
+  width: 150px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+/* footer section */
+.footer {
+  background-color: rgb(42, 171, 226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.footer h3 {
+  font-size: 12px;
+}
+
+.icon {
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
