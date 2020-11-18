@@ -73,8 +73,9 @@ main {
   font-size: 10px;
 }
 
-.section-one h3 {
+.section-one h2 {
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .text {
@@ -127,6 +128,7 @@ main {
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 80%;
+  margin-top: 10px;
 }
 
 .parent img {
