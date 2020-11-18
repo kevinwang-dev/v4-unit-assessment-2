@@ -64,9 +64,7 @@ const animalsCopy = [...animals, "elephant"];
 */
 
 //CODE HERE
-const compareNums = function (a, b) {
-  return Math.max(a, b);
-};
+const compareNums = (num1, num2) => Math.max(num1, num2);
 
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -78,7 +76,7 @@ const compareNums = function (a, b) {
 */
 
 //CODE HERE
-const bestMovie = (movieTitle) => `${movieTitle} is the best movie ever!`;
+const bestMovie = (movie) => `${movie} is the best movie ever!`;
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -174,6 +172,13 @@ const classes = [
 */
 
 //CODE HERE
+for (let i = 0; i < classes.length; i++) {
+  for (let key in classes[i]) {
+    if (classes[i][key] === true) {
+      classes[i][key] = false;
+    }
+  }
+}
 
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -189,6 +194,13 @@ let pairsArray = [];
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
+for (let i = 0; i < lettersToPair.length; i++) {
+  for (let j = i + 1; j < lettersToPair.length; j++) {
+    if (lettersToPair[i] === lettersToPair[j]) {
+      pairsArray.push([i, j]);
+    }
+  }
+}
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
 /*
@@ -238,6 +250,7 @@ const bark = function () {
 
 //CODE HERE
 const fidoSpeak = bark.call(fido);
+fidoSpeak;
 
 ////////////////////PROBLEM 13////////////////////
 /*
@@ -249,18 +262,17 @@ const fidoSpeak = bark.call(fido);
 
 //CODE HERE
 const teachTrick = function (trick) {
-  const trickArray = [];
-  trickArray.push(this.trick);
-  return trickArray;
+  this.tricks.push(trick);
+  return this.tricks;
 };
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
     Save the result to a variable called 'teachStay'.
 */
-const teachStay = teachTrick.bind(fido, "stay");
 
 //CODE HERE
+const teachStay = teachTrick.bind(fido, "stay");
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -271,6 +283,11 @@ const teachStay = teachTrick.bind(fido, "stay");
 */
 
 //CODE HERE
+const dogIntro = function (treat, toy) {
+  this.treat = treat;
+  this.toy = toy;
+  return `${this.name} is a ${this.breed} that loves ${this.treat} and their ${this.toy}!`;
+};
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
@@ -279,6 +296,7 @@ const teachStay = teachTrick.bind(fido, "stay");
 */
 
 //CODE HERE
+const fidoIntro = dogIntro.apply(fido, ["chicken", "tennis ball"]);
 
 ////////////////////PROBLEM 15////////////////////
 /*
