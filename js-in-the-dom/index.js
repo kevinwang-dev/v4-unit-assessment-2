@@ -1,7 +1,7 @@
-const formBtn = document.querySelector("#close-form");
+const formBtn = document.getElementById("close-form");
 const form = document.querySelector(".form");
 
-const toggler = function () {
+const toggler = () => {
   form.classList.toggle("hide");
   if (formBtn.innerText === "X") {
     formBtn.innerText = "+";
@@ -15,15 +15,15 @@ const emailInput = document.getElementById("email");
 const emailList = [];
 
 function validateForm() {
-  if (nameInput.value.length === 0 && emailInput.value.length === 0) {
-    nameInput.style.border = "solid red 2px";
-    emailInput.style.border = "solid red 2px";
+  if (nameInput.value === "" && emailInput.value === "") {
+    nameInput.style.border = "2px solid red";
+    emailInput.style.border = "2px solid red";
     alert("you must enter a name and an email address to subscribe!");
-  } else if (nameInput.value.length === 0) {
-    nameInput.style.border = "solid red 2px";
+  } else if (nameInput.value === "") {
+    nameInput.style.border = "2px solid red";
     alert("please enter a name to subscribe");
-  } else if (emailInput.value.length === 0) {
-    emailInput.style.border = "solid red 2px";
+  } else if (emailInput.value === "") {
+    emailInput.style.border = "2px solid red";
     alert("please enter an email address to subscribe");
   } else {
     emailList.push({
@@ -39,14 +39,17 @@ form.addEventListener("submit", function (event) {
   validateForm();
 });
 
-//Step 3
-const formContainer = document.getElementsByClassName(".form-container");
-function displayThankYou() {
-  formContainer.innerText = "Thank you for subscribing!";
-}
+const formContainer = document.querySelector(".form-container");
 
-const removeMessage = function () {
-  formContainer.setTimeout(() => {}, 3000);
+// const removeMessage = () => {
+//   formContainer.remove
+// };
+
+const displayThankYou = () => {
+  formContainer.innerText = "Thank you for subscribing!";
+  setTimeout(function () {
+    formContainer.remove();
+  }, 3000);
 };
 
 //Step 4
